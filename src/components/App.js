@@ -41,6 +41,7 @@ function App() {
   }
 
   const random = () =>{
+    clearAll();
     let newNumbers = [];
     let num = 0;
     for(let i = 0; i < 5; i++){
@@ -62,7 +63,7 @@ function App() {
       <Header />
       <div className='container main-container grid grid-col-3'>
         <MoneyButtonContainer onMoneyClick={addTicketValue}/>
-        <NumberContainer selectedNumbers={selectedNumbers} onMoneyClick={clickNumber} onClear={clearAll} onRandom={random} onCash={onCash}/>
+        <NumberContainer selectedNumbers={selectedNumbers} onNumberClick={clickNumber} onClear={clearAll} onRandom={random} onCash={onCash}/>
         <InfoContainer numbers={selectedNumbers} ticketValue={isCash?ticketValue:0} />
       </div>
     </>
